@@ -163,7 +163,7 @@ pub fn solve_part2<R: std::io::BufRead>(input: R) -> anyhow::Result<usize> {
 
         Ok(policy.check_password(password))
     })
-        .fold_results(0, |acc, valid| if valid { acc + 1 } else { acc })
+    .fold_results(0, |acc, valid| if valid { acc + 1 } else { acc })
 }
 
 #[cfg(test)]
@@ -172,7 +172,11 @@ mod tests {
 
     use std::io::Cursor;
 
-    const SAMPLE_INPUT: &'static [u8] = b"1-3 a: abcde\n1-3 b: cdefg\n2-9 c: ccccccccc";
+    const SAMPLE_INPUT: &'static [u8] = b"\
+1-3 a: abcde
+1-3 b: cdefg
+2-9 c: ccccccccc
+";
 
     #[test]
     fn test_policy_parse() {

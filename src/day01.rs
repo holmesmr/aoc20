@@ -52,7 +52,14 @@ mod tests {
     use super::*;
     use std::io::Cursor;
 
-    const SAMPLE_INPUT: &'static [u8] = b"1721\n979\n366\n299\n675\n1456";
+    const SAMPLE_INPUT: &'static [u8] = b"\
+1721
+979
+366
+299
+675
+1456
+";
 
     #[test]
     fn part1_sample() {
